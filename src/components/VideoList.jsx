@@ -6,8 +6,8 @@ var VideoList = (props) => (
     {
       props.videos.map((video, index) => {
         return (<VideoListEntry key={index} video={video}/>);
-      }
-      )}
+      })
+    }
   </div>
 
 );
