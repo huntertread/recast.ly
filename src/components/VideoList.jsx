@@ -3,11 +3,11 @@ import exampleVideoData from '../data/exampleVideoData.js';
 
 var VideoList = (props) => (
   <div className="video-list">
-    <div><h5><em>{exampleVideoData[0].snippet.title}</em> {exampleVideoData[4].snippet.thumbnails.default.url}</h5></div>
-    <div><h5><em>{exampleVideoData[1].snippet.title}</em> view goes here</h5></div>
-    <div><h5><em>{exampleVideoData[2].snippet.title}</em> view goes here</h5></div>
-    <div><h5><em>{exampleVideoData[3].snippet.title}</em> view goes here</h5></div>
-    <div><h5><em>{exampleVideoData[4].snippet.title}</em> view goes here</h5></div>
+    {
+      props.videos.map((video, index) => {
+        return (<VideoListEntry key={index} video={video}/>);
+      }
+      )}
   </div>
 
 );
