@@ -1,5 +1,30 @@
+// class VideoListEntry extends React.Component {
+//   constructor (props) {
+//     super(props);
+//   }
+
+//   onVideoListClick() {
+//     // call video player with 'this' ->
+//       // set the video in the video player to the video that was clicked
+//   }
+
+//   render() {
+//     return (
+//       <div className="video-list-entry media">
+//         <div className="media-left media-middle">
+//           <img className="media-object" src={this.props.video.snippet.thumbnails.default.url} alt="" />
+//         </div>
+//         <div className="media-body">
+//           <div className="video-list-entry-title">{this.props.video.snippet.title}</div>
+//           <div className="video-list-entry-detail">{this.props.video.snippet.description}</div>
+//         </div>
+//       </div>
+//     );
+//   }
+// }
+
 var VideoListEntry = (props) => (
-  <div className="video-list-entry media">
+  <div className="video-list-entry media" onClick={() => (props.clickHandler(props.video))}>
     <div className="media-left media-middle">
       <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="" />
     </div>
