@@ -2,13 +2,14 @@ import Search from './Search.js';
 import VideoList from './VideoList.js';
 import VideoListEntry from './VideoListEntry.js';
 import VideoPlayer from './VideoPlayer.js';
+import exampleVideoData from '../data/exampleVideoData.js';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentVideo: props.videos[0],
-      videos: props.videos,
+      currentVideo: exampleVideoData[0],
+      videos: exampleVideoData
     },
     this.clickHandler = this.clickHandler.bind(this);
   }
